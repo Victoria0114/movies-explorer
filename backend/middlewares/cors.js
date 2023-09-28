@@ -1,6 +1,6 @@
 const allowedCors = [
-  'https://victoriasmesto.nomoreparties.co',
-  'http://victoriasmesto.nomoreparties.co',
+  'https://victoria.nomoreparties.co',
+  'http://victoria.nomoreparties.co',
   'https://localhost:3000',
   'http://localhost:3000',
   'https://localhost:3001',
