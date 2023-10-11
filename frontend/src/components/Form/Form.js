@@ -1,18 +1,18 @@
 import React from "react"
-import { Link } from "react-router-dom"
-import "./Form.css"
 import logo from "../../images/logo.svg"
+import "./Form.css"
+import { Link } from "react-router-dom"
 
 function Form({
-  title,
   children,
-  linkText,
+  title,
   link,
+  linkText,
+  isLoading,
   question,
   buttonText,
-  isLoading,
-  isDisablBtn,
   onSubmit,
+  isDisablBtn,
 }) {
 
   return (

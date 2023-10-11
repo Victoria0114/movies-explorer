@@ -1,9 +1,9 @@
 import React from "react"
-import AboutMe from "../AboutMe/AboutMe"
-import AboutProject from "../AboutProject/AboutProject"
 import Promo from "../Promo/Promo"
-import Portfolio from "../Portfolio/Portfolio"
+import AboutProject from "../AboutProject/AboutProject"
+import AboutMe from "../AboutMe/AboutMe"
 import Techs from "../Techs/Techs"
+import Portfolio from "../Portfolio/Portfolio"
 
 function Main() {
   return (

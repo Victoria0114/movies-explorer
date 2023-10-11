@@ -1,4 +1,4 @@
-import { handleCheckRes } from "./config"
+import { handleCheckRes } from "./filmHelpers"
 
 export const BASE_URL = "https://api.nomoreparties.co/beatfilm-movies"
 

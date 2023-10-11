@@ -152,7 +152,7 @@
     display: flex;
   }
   .header__admin{
-    display: none;
+    display: none !important; 
   }
 }
 

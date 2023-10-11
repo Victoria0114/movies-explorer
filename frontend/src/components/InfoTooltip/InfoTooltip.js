@@ -1,14 +1,14 @@
 import React from 'react';
 import './InfoTooltip.css';
 
-function InfoToolTip(props) {
+function InfoToolTip({isOpen, onClose, onCloseOverlay, isActionSuccess}) {
 	return (
 		<div
-			className={`popup popup_type_tooltip ${props.isOpen ? 'popup_opened' : ''}`}
-			onClick={props.onCloseOverlay}
+			className={`popup popup_type_tooltip ${isOpen ? 'popup_opened' : ''}`}
+			onClick={onCloseOverlay}
 		>
 			<div className='popup__container'>
-				{props.isActionSuccess ? (
+				{isActionSuccess ? (
 					<>
 						<p className='popup__signup-title'>Добро пожаловать!</p>
 					</>
@@ -23,7 +23,7 @@ function InfoToolTip(props) {
 				<button
 					type='button'
 					className='popup__close-button'
-					onClick={props.onClose}
+					onClick={onClose}
 				></button>
 			</div>
 		</div>

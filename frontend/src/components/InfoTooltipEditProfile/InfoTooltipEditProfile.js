@@ -1,14 +1,14 @@
 import React from 'react';
 import '../InfoTooltip/InfoTooltip.css';
 
-function InfoTooltipEditProfile(props) {
+function InfoTooltipEditProfile({isOpen, onClose, onCloseOverlay, isProfileUpdating}) {
 	return (
 		<div
-			className={`popup popup_type_tooltip ${props.isOpen ? 'popup_opened' : ''}`}
-			onClick={props.onCloseOverlay}
+			className={`popup popup_type_tooltip ${isOpen ? 'popup_opened' : ''}`}
+			onClick={onCloseOverlay}
 		>
 			<div className='popup__container'>
-				{props.isProfileUpdating ? (
+				{isProfileUpdating ? (
 					<>
 						<p className='popup__signup-title'>Редактирование прошло успешно!</p>
 					</>
@@ -23,7 +23,7 @@ function InfoTooltipEditProfile(props) {
 				<button
 					type='button'
 					className='popup__close-button'
-					onClick={props.onClose}
+					onClick={onClose}
 				></button>
 			</div>
 		</div>
