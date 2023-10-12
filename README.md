@@ -34,7 +34,7 @@ https://github.com/Victoria0114/movies-explorer
 
 ### Название макета в фигме:
 
-- light-2
+- light-2.
 
 ### Ссылка на пулреквест
 
