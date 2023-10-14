@@ -8,10 +8,12 @@ import './Movies.css';
 import * as movies from '../../utils/MoviesApi';
 
 function Movies({ userSavedFilms, likeMovie, loggedIn, onDeleteCard }) {
+	const takeFromLocal = JSON.parse(localStorage.getItem('shortMovies'))	
+	const finalToggle = takeFromLocal === null ? false : takeFromLocal
 	const [filteredMovies, setFilteredMovies] = useState([]);
 	const [initialCardsMovies, setInitialCardsMovies] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
-	const [isShortMovies, setisShortMovies] = useState(false);
+	const [isShortMovies, setisShortMovies] = useState(finalToggle);
 	const [isReqError, setisReqError] = useState(false);
 	const [isNotFound, setIsNotFound] = useState(false);
 
@@ -60,9 +62,9 @@ function Movies({ userSavedFilms, likeMovie, loggedIn, onDeleteCard }) {
 		localStorage.setItem('shortMovies', !isShortMovies);
 	}
 
-	useEffect(() => {
-		setisShortMovies(localStorage.getItem('shortFilms') === 'true');
-	}, []);
+	// useEffect(() => {
+	// 	setisShortMovies(localStorage.getItem('shortFilms') === 'true');
+	// }, []);
 
 	useEffect(() => {
 		if (localStorage.getItem('films')) {

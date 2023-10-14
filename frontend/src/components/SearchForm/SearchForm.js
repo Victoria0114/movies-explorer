@@ -4,9 +4,11 @@ import './SearchForm.css';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import { useLocation } from 'react-router-dom';
 
-function SearchForm({isShortMovies, setSearchQueryValue, onFilterMovies, }) {
+function SearchForm({isShortMovies, setSearchQueryValue, onFilterMovies, saved }) {
+	const takeFromLocal = localStorage.getItem('filmsSearch') 
+	const finalQuery = takeFromLocal === null ? '' : takeFromLocal 
 	const location = useLocation();
-	const [query, setQuery] = useState('');
+	const [query, setQuery] = useState( saved ? '' : finalQuery);
 	const [hasSearchError, setHasSearchError] = useState(false);
 
 	function handleQueryInputChange(event) {

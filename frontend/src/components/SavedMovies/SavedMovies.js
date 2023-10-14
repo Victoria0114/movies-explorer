@@ -41,6 +41,7 @@ function SavedMovies({ onDeleteCard, userSavedFilms, loggedIn, likeMovie }) {
 			<SearchForm
 				onFilterMovies={handleToggleShortMovies}
 				setSearchQueryValue={setSearchQueryValue}
+				saved
 			/>
 			<MoviesCardList
 				cards={filteredMovies}

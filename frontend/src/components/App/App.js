@@ -91,7 +91,6 @@ function App() {
 			.then((data) => {
 				setIsPopUpEditOpen(true);
 				setIsProfileUpdating(true);
-				console.log(setIsProfileUpdating);
 				setUser(data);
 			})
 			.catch((error) => {

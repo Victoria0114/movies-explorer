@@ -32,15 +32,14 @@ function MoviesCardList({
 
 
 	useEffect(() => {
-		setTimeout(() => {
 			window.addEventListener('resize', handleShowFilmsDisplay);
-		}, 500);
+			return 	() => {
+				window.removeEventListener('resize', handleShowFilmsDisplay)
+			}
 	});
 
 	function handleShowFilmsDisplay() {
 		const display = window.innerWidth;
-		console.log('Отображение карточек в от разрешения экрана');
-		console.log(display);
 		if (display > 1180) {
 			setShownMovies(12);
 		} else if (display > 767) {
