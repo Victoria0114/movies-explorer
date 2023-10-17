@@ -1,0 +1,74 @@
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 30px 0 60px 0;
+}
+
+.filter__checkbox-title {
+  color: #000;
+  margin-left: 14px;
+  margin-right: 25px;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.filter__toggle {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.filter__toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.filter__toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2BE080;
+  -webkit-transition: .4s;
+  transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle:hover {
+  opacity: 0.8;
+}
+
+.filter__toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+    top: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .filter__toggle-slider {
+  background-color: #EBEBEB;
+}
+
+input:checked + .filter__toggle-slider::before {
+  background-color: #2BE080;
+}
+
+input:checked + .filter__toggle-slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}

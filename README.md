@@ -24,9 +24,9 @@ Nginx - веб-сервер и прокси-сервер
 
 ### Ccылка на проекта и IP
 
-IP 158.160.72.253
+IP 51.250.95.0
 
-https://victoriasmesto.nomoreparties.co
+https://victoria.nomoreparties.co
 
 ### Ссылка на репозиторий
 
@@ -34,7 +34,7 @@ https://github.com/Victoria0114/movies-explorer
 
 ### Название макета в фигме:
 
-- light-2
+- light-2.
 
 ### Ссылка на пулреквест
 
